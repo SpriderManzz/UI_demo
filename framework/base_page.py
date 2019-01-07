@@ -19,11 +19,17 @@ class BasePage(object):
         # quit browser and end testing
 
     def quit_browser(self):
+        """
+        退出浏览器
+        :return:
+        """
         self.driver.quit()
 
-        # 浏览器前进操作
-
     def forward(self):
+        """
+        浏览器前进
+        :return:
+        """
         self.driver.forward()
         logger.info("Click forward on current page.")
 
