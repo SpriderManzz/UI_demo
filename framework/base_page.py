@@ -84,8 +84,8 @@ class BasePage(object):
         element = ''
         if '=>' not in selector:
             return self.driver.find_element_by_id(selector)
-        selector_by = selector.split('=>')[0]
-        selector_value = selector.split('=>')[1]
+        selector_by = selector.split('=>')[0]  # 取的是=>左边的值
+        selector_value = selector.split('=>')[1] # 取的是=>右边的值
 
         if selector_by == "i" or selector_by == 'id':
             try:

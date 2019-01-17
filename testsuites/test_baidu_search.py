@@ -7,11 +7,12 @@ from pageobjects.baidu_homepage import HomePage
 
 class BaiduSearch(unittest.TestCase):
     @classmethod
-    def setUpClass(cls):
+    def setUpClass(cls):  # 类函数
         """
         测试固件的setUp()的代码，主要是测试的前提准备工作
         :return:
         """
+        print cls
         browse = BrowserEngine(cls)
         cls.driver = browse.open_browser(cls)
 
@@ -44,8 +45,7 @@ class BaiduSearch(unittest.TestCase):
         homepage.type_search('python')  # 调用页面对象中的方法
         homepage.send_submit_btn()  # 调用页面对象类中的点击搜索按钮方法
         time.sleep(2)
-        homepage.get_windows_img()  # 调用基类截图方法
-
+        homepage.get_windows_img()  # 调用基类截图方法=\
 
 if __name__ == '__main__':
     unittest.main()

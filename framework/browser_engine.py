@@ -17,7 +17,6 @@ class BrowserEngine(object):
         self.driver = driver
 
         # read the browser type from config.ini file, return the driver
-
     def open_browser(self, driver):
         config = ConfigParser()
         # file_path = os.path.dirname(os.getcwd()) + '/config/config.ini'
