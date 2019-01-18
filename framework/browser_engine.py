@@ -14,7 +14,7 @@ class BrowserEngine(object):
     ie_driver_path = dir + '/tools/IEDriverServer.exe'
 
     def __init__(self, driver):
-        self.driver = driver
+        self.driver = driver    # self.driver指向的是类BaiduSearch，因为传进来的是指向BaiduSearch类的cls
 
         # read the browser type from config.ini file, return the driver
     def open_browser(self, driver):

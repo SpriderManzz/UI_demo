@@ -12,7 +12,6 @@ class BaiduSearch(unittest.TestCase):
         测试固件的setUp()的代码，主要是测试的前提准备工作
         :return:
         """
-        print cls
         browse = BrowserEngine(cls)
         cls.driver = browse.open_browser(cls)
 
